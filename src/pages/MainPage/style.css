@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+h1 {
+  font-family: "Mulish", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  color: black;
+}
+
+form {
+  font-family: "Mulish", sans-serif;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 25px;
+  margin-top: 25px;
+  box-shadow: 0 0 10px #000000;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  color: rgb(88, 88, 88);
+  margin-top: 25px;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 3%;
+}
+
+input {
+  font-family: "Mulish", sans-serif;
+  font-size: 20px;
+  width: 90%;
+  height: 15px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(230, 230, 230);
+  color: rgb(85, 85, 85);
+  padding: 15px;
+}
+
+button {
+  font-family: "Mulish", sans-serif;
+  font-size: 18px;
+  width: 80px;
+  height: 40px;
+  background-color: #591ce6;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  margin: 0 auto;
+  margin-top: 25px;
+  display: block;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7c44ff;
+}
+
+button:active {
+  background-color: #3609a0;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* hide the spin button in the input */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+hr {
+  border-top: 1px solid #d8d8d8;
+  margin-top: 25px;
+}
