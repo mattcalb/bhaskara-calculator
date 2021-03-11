@@ -13,7 +13,6 @@ form {
   background-color: white;
   border-radius: 5px;
   padding: 25px;
-  margin-top: 25px;
   box-shadow: 0 0 10px #000000;
 }
 
@@ -43,7 +42,7 @@ button {
   font-family: "Mulish", sans-serif;
   font-size: 18px;
   width: 80px;
-  height: 40px;
+  padding: 10px;
   background-color: #591ce6;
   color: white;
   border-radius: 5px;

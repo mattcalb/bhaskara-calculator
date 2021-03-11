@@ -8,13 +8,15 @@
 }
 
 .result-box {
-    display: block;
     border-radius: 5px;
     width: 90%;
     padding: 15px;
     background-color: #440bca;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .solution {

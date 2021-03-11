@@ -4,8 +4,10 @@
 }
 
 body {
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
   background-color: #2b1c4e;
-  padding: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
