@@ -70,19 +70,19 @@ function MainPage() {
 
     return (
         <div>
-                <form autocomplete="off" onSubmit={handleSubmit}>
+                <form autoComplete="off" onSubmit={handleSubmit}>
 
                     <h1>Bhaskara Calculator</h1>
 
-                    <label for="coeficient-a">Coeficient A</label>
+                    <label htmlFor="coeficient-a">Coeficient A</label>
 
                     <input type="number" id="coeficient-a" placeholder="0" onChange={e => setCoeficientA(e.target.value)}></input>
 
-                    <label for="coeficient-b">Coeficient B</label>
+                    <label htmlFor="coeficient-b">Coeficient B</label>
 
                     <input type="number" id="coeficient-b" placeholder="0" onChange={e => setCoeficientB(e.target.value)}></input>      
                 
-                    <label for="coeficient-c">Coeficient C</label>
+                    <label htmlFor="coeficient-c">Coeficient C</label>
 
                     <input type="number" id="coeficient-c" placeholder="0" onChange={e => setCoeficientC(e.target.value)}></input>
 
