@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bhaskara-calculator/static/css/main.1623e3c8.chunk.css",
+    "main.css": "/bhaskara-calculator/static/css/main.d099e519.chunk.css",
     "main.js": "/bhaskara-calculator/static/js/main.74a54806.chunk.js",
     "main.js.map": "/bhaskara-calculator/static/js/main.74a54806.chunk.js.map",
     "runtime-main.js": "/bhaskara-calculator/static/js/runtime-main.544b1cc0.js",
@@ -8,13 +8,13 @@
     "static/js/2.d2c3f65e.chunk.js": "/bhaskara-calculator/static/js/2.d2c3f65e.chunk.js",
     "static/js/2.d2c3f65e.chunk.js.map": "/bhaskara-calculator/static/js/2.d2c3f65e.chunk.js.map",
     "index.html": "/bhaskara-calculator/index.html",
-    "static/css/main.1623e3c8.chunk.css.map": "/bhaskara-calculator/static/css/main.1623e3c8.chunk.css.map",
+    "static/css/main.d099e519.chunk.css.map": "/bhaskara-calculator/static/css/main.d099e519.chunk.css.map",
     "static/js/2.d2c3f65e.chunk.js.LICENSE.txt": "/bhaskara-calculator/static/js/2.d2c3f65e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.544b1cc0.js",
     "static/js/2.d2c3f65e.chunk.js",
-    "static/css/main.1623e3c8.chunk.css",
+    "static/css/main.d099e519.chunk.css",
     "static/js/main.74a54806.chunk.js"
   ]
 }
