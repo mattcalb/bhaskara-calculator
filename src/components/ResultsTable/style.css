@@ -6,13 +6,13 @@
     padding: 20px;
     border-radius: 5px;
     background-color: white;
+    box-shadow: 0 0 10px #000000;
 }
 
 .result-box {
     border-radius: 5px;
     width: 90%;
     padding: 15px;
-    background-color: #440bca;
     margin: 0 auto;
     margin-top: 15px;
     display: flex;
@@ -34,4 +34,8 @@
 
 .yvertex {
     background-color: rgb(235, 21, 92);
+}
+
+.concavity {
+    background-color: #440bca;
 }
