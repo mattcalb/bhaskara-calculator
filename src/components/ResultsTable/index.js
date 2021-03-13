@@ -2,12 +2,16 @@ import React from 'react';
 
 import './style.css';
 
-function ResultsTable({delta, solution, xVertex, yVertex}) {
+function ResultsTable({delta, solution, xVertex, yVertex, concavity}) {
 
     if (solution[0] === undefined && solution[1] === undefined) {
         
         solution[0] = ' ';
         solution[1] = ' ';
+    }
+
+    if (concavity === '') {
+        concavity = 'none'
     }
 
     return (
@@ -27,6 +31,10 @@ function ResultsTable({delta, solution, xVertex, yVertex}) {
 
             <div className="result-box yvertex">
                 Y Vertex = {yVertex}
+            </div>
+
+            <div className="result-box concavity">
+                Concavity = {concavity}
             </div>
 
         </div>

@@ -20,6 +20,8 @@ function MainPage() {
 
     const [solution, setSolution] = useState([]);
 
+    const [concavity, setConcavity] = useState('');
+
     function roundNumber(number) {
 
         if (Number.isInteger(number)) {
@@ -49,6 +51,15 @@ function MainPage() {
             return;
         }
 
+        if (coeficientA == 0) {
+
+            alert('Not a quadratic function!');
+
+            window.location.reload();
+
+            return;
+        }
+
         setDelta(tmp_delta);
 
         const tmp_xVertex = roundNumber(Math.round(- coeficientB / (2 * coeficientA), 2));
@@ -66,10 +77,21 @@ function MainPage() {
         tmp_solution[1] = roundNumber((- coeficientB - Math.sqrt(tmp_delta)) / (2 * coeficientA));
 
         setSolution(tmp_solution);
+
+        if (coeficientA > 0) {
+            setConcavity('Upward')
+        }
+
+        else {
+            setConcavity('Downward')
+        }
     }
 
     return (
-        <div>
+        <div className="main-container">
+
+            <div className="float-element">
+
                 <form autoComplete="off" onSubmit={handleSubmit}>
 
                     <h1>Bhaskara Calculator</h1>
@@ -90,9 +112,16 @@ function MainPage() {
 
                     <hr></hr>
 
-                    <ResultsTable delta={delta} solution={solution} xVertex={xVertex} yVertex={yVertex}/>
-
                 </form>
+
+            </div>
+
+            <div className="float-element">
+
+                <ResultsTable className="float-element" delta={delta} solution={solution} xVertex={xVertex} yVertex={yVertex} concavity={concavity}/>
+
+            </div>
+
         </div>
     )
 };

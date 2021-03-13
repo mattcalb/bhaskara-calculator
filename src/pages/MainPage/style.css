@@ -1,14 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
 
+@media only screen and (max-width: 1100px) {
+  .float-element {
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .float-element {
+    float: left;
+    width: 500px;
+    margin-right: 25px;
+  }
+}
+
 h1 {
-  font-family: "Mulish", sans-serif;
-  font-size: 50px;
+  font-size: 45px;
   text-align: center;
   color: black;
 }
 
 form {
-  font-family: "Mulish", sans-serif;
   text-align: center;
   background-color: white;
   border-radius: 5px;
@@ -27,7 +39,6 @@ label {
 }
 
 input {
-  font-family: "Mulish", sans-serif;
   font-size: 20px;
   width: 90%;
   height: 15px;
@@ -39,7 +50,6 @@ input {
 }
 
 button {
-  font-family: "Mulish", sans-serif;
   font-size: 18px;
   width: 80px;
   padding: 10px;
