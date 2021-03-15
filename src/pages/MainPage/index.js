@@ -110,9 +110,8 @@ function MainPage() {
           <hr></hr>
         </form>
       </div>
-      <div className="float-element">
+      <div className="float-element result-table">
         <ResultsTable
-          className="float-element"
           delta={delta}
           solution={solution}
           xVertex={xVertex}
