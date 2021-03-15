@@ -108,6 +108,8 @@ function MainPage() {
             Submit
           </button>
           <hr></hr>
+          Made with ❤️ by {""}
+          <a href="https://github.com/mattcalb/bhaskara-calculator">mattcalb</a>
         </form>
       </div>
       <div className="float-element result-table">
