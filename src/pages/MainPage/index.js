@@ -1,129 +1,127 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import ResultsTable from '../../components/ResultsTable';
+import ResultsTable from "../../components/ResultsTable";
 
-import './style.css';
+import "./style.css";
 
 function MainPage() {
+  const [coeficientA, setCoeficientA] = useState(0);
+  const [coeficientB, setCoeficientB] = useState(0);
+  const [coeficientC, setCoeficientC] = useState(0);
+  const [delta, setDelta] = useState(0);
+  const [xVertex, setXVertex] = useState(0);
+  const [yVertex, setYVertex] = useState(0);
+  const [solution, setSolution] = useState([]);
+  const [concavity, setConcavity] = useState("");
 
-    const [coeficientA, setCoeficientA] = useState(0);
+  function roundNumber(number) {
+    if (Number.isInteger(number)) {
+      return number;
+    } else {
+      number = number.toFixed(1);
 
-    const [coeficientB, setCoeficientB] = useState(0);
+      return number;
+    }
+  }
 
-    const [coeficientC, setCoeficientC] = useState(0);
+  function handleSubmit(e) {
+    e.preventDefault();
 
-    const [delta, setDelta] = useState(0);
+    const tmp_delta = roundNumber(
+      Math.pow(coeficientB, 2) - 4 * coeficientA * coeficientC
+    );
 
-    const [xVertex, setXVertex] = useState(0);
+    if (tmp_delta < 0) {
+      alert("Negative Delta, can't calculate!");
 
-    const [yVertex, setYVertex] = useState(0);
+      window.location.reload();
 
-    const [solution, setSolution] = useState([]);
-
-    const [concavity, setConcavity] = useState('');
-
-    function roundNumber(number) {
-
-        if (Number.isInteger(number)) {
-
-            return number;
-
-        } else {
-
-            number = number.toFixed(1);
-
-            return number;
-        }
+      return;
     }
 
-    function handleSubmit(e) {
+    if (coeficientA == 0) {
+      alert("Not a quadratic function!");
 
-        e.preventDefault();
+      window.location.reload();
 
-        const tmp_delta = roundNumber(Math.pow(coeficientB, 2) - 4 * coeficientA * coeficientC);
-
-        if (tmp_delta < 0) {
-
-            alert ("Negative Delta, can't calculate!");
-
-            window.location.reload();
-        
-            return;
-        }
-
-        if (coeficientA == 0) {
-
-            alert('Not a quadratic function!');
-
-            window.location.reload();
-
-            return;
-        }
-
-        setDelta(tmp_delta);
-
-        const tmp_xVertex = roundNumber(Math.round(- coeficientB / (2 * coeficientA), 2));
-
-        setXVertex(tmp_xVertex);
-
-        const tmp_yVertex = roundNumber(- tmp_delta / (4 * coeficientA));
-
-        setYVertex(tmp_yVertex);
-
-        const tmp_solution = [2];
-
-        tmp_solution[0] = roundNumber((- coeficientB + Math.sqrt(tmp_delta)) / (2 * coeficientA));
-
-        tmp_solution[1] = roundNumber((- coeficientB - Math.sqrt(tmp_delta)) / (2 * coeficientA));
-
-        setSolution(tmp_solution);
-
-        if (coeficientA > 0) {
-            setConcavity('Upward')
-        }
-
-        else {
-            setConcavity('Downward')
-        }
+      return;
     }
 
-    return (
-        <div className="main-container">
+    setDelta(tmp_delta);
 
-            <div className="float-element">
+    const tmp_xVertex = roundNumber(
+      Math.round(-coeficientB / (2 * coeficientA), 2)
+    );
 
-                <form autoComplete="off" onSubmit={handleSubmit}>
+    setXVertex(tmp_xVertex);
 
-                    <h1>Bhaskara Calculator</h1>
+    const tmp_yVertex = roundNumber(-tmp_delta / (4 * coeficientA));
 
-                    <label htmlFor="coeficient-a">Coeficient A</label>
+    setYVertex(tmp_yVertex);
 
-                    <input type="number" id="coeficient-a" placeholder="0" onChange={e => setCoeficientA(e.target.value)}></input>
+    const tmp_solution = [2];
 
-                    <label htmlFor="coeficient-b">Coeficient B</label>
+    tmp_solution[0] = roundNumber(
+      (-coeficientB + Math.sqrt(tmp_delta)) / (2 * coeficientA)
+    );
 
-                    <input type="number" id="coeficient-b" placeholder="0" onChange={e => setCoeficientB(e.target.value)}></input>      
-                
-                    <label htmlFor="coeficient-c">Coeficient C</label>
+    tmp_solution[1] = roundNumber(
+      (-coeficientB - Math.sqrt(tmp_delta)) / (2 * coeficientA)
+    );
 
-                    <input type="number" id="coeficient-c" placeholder="0" onChange={e => setCoeficientC(e.target.value)}></input>
+    setSolution(tmp_solution);
 
-                    <button type="submit" className="submit-button">Submit</button>
+    if (coeficientA > 0) {
+      setConcavity("Upward");
+    } else {
+      setConcavity("Downward");
+    }
+  }
 
-                    <hr></hr>
-
-                </form>
-
-            </div>
-
-            <div className="float-element">
-
-                <ResultsTable className="float-element" delta={delta} solution={solution} xVertex={xVertex} yVertex={yVertex} concavity={concavity}/>
-
-            </div>
-
-        </div>
-    )
-};
+  return (
+    <div className="main-container">
+      <div className="float-element">
+        <form autoComplete="off" onSubmit={handleSubmit}>
+          <h1>Bhaskara Calculator</h1>
+          <label htmlFor="coeficient-a">Coeficient A</label>
+          <input
+            type="number"
+            id="coeficient-a"
+            placeholder="0"
+            onChange={(e) => setCoeficientA(e.target.value)}
+          />
+          <label htmlFor="coeficient-b">Coeficient B</label>
+          <input
+            type="number"
+            id="coeficient-b"
+            placeholder="0"
+            onChange={(e) => setCoeficientB(e.target.value)}
+          />
+          <label htmlFor="coeficient-c">Coeficient C</label>
+          <input
+            type="number"
+            id="coeficient-c"
+            placeholder="0"
+            onChange={(e) => setCoeficientC(e.target.value)}
+          />
+          <button type="submit" className="submit-button">
+            Submit
+          </button>
+          <hr></hr>
+        </form>
+      </div>
+      <div className="float-element">
+        <ResultsTable
+          className="float-element"
+          delta={delta}
+          solution={solution}
+          xVertex={xVertex}
+          yVertex={yVertex}
+          concavity={concavity}
+        />
+      </div>
+    </div>
+  );
+}
 
 export default MainPage;
