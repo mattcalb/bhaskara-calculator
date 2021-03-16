@@ -49,9 +49,7 @@ function MainPage() {
 
     setDelta(tmp_delta);
 
-    const tmp_xVertex = roundNumber(
-      Math.round(-coeficientB / (2 * coeficientA), 2)
-    );
+    const tmp_xVertex = roundNumber(-coeficientB / (2 * coeficientA));
 
     setXVertex(tmp_xVertex);
 
