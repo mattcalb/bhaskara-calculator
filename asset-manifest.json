@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/bhaskara-calculator/static/css/main.fdabd751.chunk.css",
-    "main.js": "/bhaskara-calculator/static/js/main.c0660eae.chunk.js",
-    "main.js.map": "/bhaskara-calculator/static/js/main.c0660eae.chunk.js.map",
+    "main.js": "/bhaskara-calculator/static/js/main.b4501bc3.chunk.js",
+    "main.js.map": "/bhaskara-calculator/static/js/main.b4501bc3.chunk.js.map",
     "runtime-main.js": "/bhaskara-calculator/static/js/runtime-main.544b1cc0.js",
     "runtime-main.js.map": "/bhaskara-calculator/static/js/runtime-main.544b1cc0.js.map",
     "static/js/2.d2c3f65e.chunk.js": "/bhaskara-calculator/static/js/2.d2c3f65e.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.544b1cc0.js",
     "static/js/2.d2c3f65e.chunk.js",
     "static/css/main.fdabd751.chunk.css",
-    "static/js/main.c0660eae.chunk.js"
+    "static/js/main.b4501bc3.chunk.js"
   ]
 }
